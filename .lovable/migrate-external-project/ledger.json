@@ -1,0 +1,72 @@
+{
+  "source": "inqr-emerald.zip",
+  "capabilities": [
+    {
+      "capability": "Frontend code, routes, branding and emerald theme",
+      "source": "React archive",
+      "outcome": "Display original frontend in Lovable using TanStack navigation",
+      "status": "verified",
+      "next_action": null
+    },
+    {
+      "capability": "Schema and application records",
+      "source": "External SQL Server",
+      "outcome": "Recreated on Lovable Cloud; old SQL Server records not imported",
+      "status": "implemented",
+      "next_action": "Optional: export old order tables to CSV for import"
+    },
+    {
+      "capability": "Auth identities and authorization",
+      "source": "No application auth detected",
+      "outcome": "No new login or permissions introduced",
+      "status": "not_applicable",
+      "next_action": null
+    },
+    {
+      "capability": "Brand assets",
+      "source": "Bundled images",
+      "outcome": "Import through Lovable Assets",
+      "status": "verified",
+      "next_action": null
+    },
+    {
+      "capability": "Order creation, completion, reopening, tracking and ratings",
+      "source": "Original Express API",
+      "outcome": "Original /api contracts served from Lovable Cloud",
+      "status": "verified",
+      "next_action": null
+    },
+    {
+      "capability": "QR and thermal printing",
+      "source": "qrcode.react and browser print",
+      "outcome": "Preserve original components",
+      "status": "implemented",
+      "next_action": "Real order printing remains unverified until original API is connected"
+    },
+    {
+      "capability": "Realtime, web push, public endpoints and callbacks",
+      "source": "Socket.IO, VAPID and Express",
+      "outcome": "Tracking page uses its built-in periodic refresh; push subscriptions are stored",
+      "status": "pending",
+      "next_action": "Web push sending and Socket.IO live channel not available yet"
+    },
+    {
+      "capability": "Secrets and cutover",
+      "source": "Excluded source environment files",
+      "outcome": "Never import credentials or redirect external callers",
+      "status": "pending",
+      "next_action": "No production cutover performed"
+    }
+  ],
+  "verification": {
+    "build": "OK",
+    "routing_test": "passed",
+    "logo": "renders",
+    "settings": "save and reload verified",
+    "navigation": "orders, tables, ratings, archive and settings verified",
+    "responsive": "No horizontal overflow at 951px and 390px",
+    "live_orders": "verified: create, duplicate block, ready, undo, tracking, rating, pickup, archive, daily board",
+    "auth": "not introduced",
+    "production_cutover": "not performed"
+  }
+}
